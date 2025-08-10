@@ -1,0 +1,7 @@
+baseURL = "https://breakdown08.github.io/tech_writer_portfolio/"
+languageCode = "ru"
+title = "Портфолио технического писателя"
+
+[params]
+  author = "Евгения Мищенко"
+  about = "Технический писатель — документация, гайды, руководства"
