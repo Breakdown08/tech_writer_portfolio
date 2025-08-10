@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="projects">
+    {{ range (where .Site.RegularPages "Section" "projects") }}
+        {{ partial "project_preview.html" . }}
+    {{ end }}
+</div>
+{{ end }}

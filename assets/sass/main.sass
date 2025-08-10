@@ -1,0 +1,131 @@
+$color_scheme: (white: #ffffff, black: #000000, green: #4e8970, red: #b17a64, orange: #b19a64, blue: #4b6b84, gray_light: #c7c7c7, gray_dark: #9b9b9b)
+
+=transition($props...)
+  transition: #{$props} 0.3s ease
+
+=flex-center($direction: row, $justify: center, $align: center)
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify
+  align-items: $align
+
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translateY(10px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+body
+  background-color: map-get($color_scheme, green)
+  color: map-get($color_scheme, black)
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  line-height: 1.6
+  margin: 0
+  padding: 0
+  min-height: 100vh
+  +flex-center(column, flex-start, flex-start)
+
+header
+  background-color: map-get($color_scheme, gray_light)
+  width: 100%
+  padding: 2rem 3rem
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3)
+  color: map-get($color_scheme, black)
+  animation: fadeInUp 0.6s ease forwards
+
+  h1
+    margin: 0 0 0.3rem 0
+    font-weight: 700
+    font-size: 2.8rem
+
+  p
+    margin: 0
+    font-weight: 400
+    font-size: 1.2rem
+    color: map-get($color_scheme, black)
+
+main
+  width: 100%
+  max-width: 960px
+  padding: 3rem 2rem
+  animation: fadeInUp 0.8s ease forwards
+
+  h2
+    font-size: 2.2rem
+    font-weight: 700
+    margin-bottom: 1.5rem
+    color: map-get($color_scheme, black)
+
+  .projects
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    gap: 2rem
+
+.project_card
+  background-color: map-get($color_scheme, gray_light)
+  border-radius: 8px
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25)
+  padding: 1.5rem
+  color: map-get($color_scheme, black)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  text-align: center
+  transition: box-shadow 0.3s ease, transform 0.3s ease
+
+  &:hover
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4)
+    transform: translateY(-6px)
+
+  img
+    width: 100%
+    border-radius: 6px
+    margin-bottom: 1rem
+    object-fit: cover
+    user-select: none
+
+  h3
+    margin: 0 0 0.7rem 0
+    font-weight: 600
+    font-size: 1.5rem
+    color: map-get($color_scheme, black)
+
+  p
+    margin: 0 0 1.2rem 0
+    font-size: 1rem
+    color: map-get($color_scheme, black)
+    line-height: 1.4
+
+  .btn
+    margin-top: auto
+    display: inline-block
+    padding: 0.5rem 1.2rem
+    background-color: map-get($color_scheme, dark-3)
+    color: map-get($color_scheme, black)
+    text-decoration: none
+    font-weight: 600
+    border-radius: 4px
+    border: 2px solid map-get($color_scheme, dark-3)
+    cursor: pointer
+    user-select: none
+    +transition(background-color, border-color, color)
+
+    &:hover,
+    &:focus
+      background-color: transparent
+      border-color: map-get($color_scheme, orange)
+      color: map-get($color_scheme, orange)
+
+
+footer
+    width: 100%
+    padding: 1.5rem 2rem
+    background-color: map-get($color_scheme, gray_dark)
+    color: map-get($color_scheme, black)
+    font-size: 1.2rem
+    text-align: center
+    box-shadow: inset 0 1px 3px rgba(255,255,255,0.1)
+    margin-top: auto
