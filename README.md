@@ -31,9 +31,11 @@
     sudo snap install hugo
     ```
     > Для Windows (через Chocolatey)
+    ```bash
     choco install hugo-extended
+    ```
 
-2. Клонируйте репозиторий
+2. Клонируйте репозиторий и перейдите в его корень
     
     ```bash
     git clone git@github.com:<ВАШ_ПСЕВДОНИМ>/portfolio.git
