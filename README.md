@@ -41,3 +41,9 @@
     git clone git@github.com:<ВАШ_ПСЕВДОНИМ>/portfolio.git
     cd portfolio
     ```
+
+3. В терминале по адресу этой директории выполнить
+
+    ```bash
+    hugo server --bind="0.0.0.0" --port="1313" --baseURL="http://192.168.1.10:1313"
+    ```
