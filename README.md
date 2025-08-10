@@ -20,11 +20,12 @@
 
 Для локальной разработки и предпросмотра сайта выполните следующие шаги:
 
-1. Установите Hugo (рекомендуется extended-версия для поддержки SASS):
-
-   ```bash
-   # Для macOS (с Homebrew)
-   brew install hugo
-
-   # Для Ubuntu/Debian
-   sudo snap install hugo
+1. Установите Hugo (рекомендуется extended-версия для поддержки SASS/SCSS):
+    > Для macOS (с Homebrew)
+    ```bash
+    brew install hugo
+    ```
+    > Для Ubuntu/Debian
+    ```bash
+    sudo snap install hugo
+    ```
